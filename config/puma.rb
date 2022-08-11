@@ -44,14 +44,11 @@ plugin :tmp_restart
 
 IDLE_TIMEOUT = 5 # seconds
 
-
 out_of_band { idle_timer }
 
 def idle_timer
-  if @thread
-    puts "Found thread"
-    @thread.kill
-  end
+  @thread.kill if @thread
+
   @thread = Thread.new do
     sleep IDLE_TIMEOUT
     puts "Server idled for #{IDLE_TIMEOUT} seconds. Server exits stage left."
