@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+if [[ "$PRIMARY_REGION" == "$FLY_REGION" ]]; then
+
+cat << EOF >> litefs.yml
+  primary: true
+EOF
+
+fi
+
+exec /usr/local/bin/litefs -config ./litefs.yml

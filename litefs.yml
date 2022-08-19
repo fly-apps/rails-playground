@@ -1,0 +1,6 @@
+exec: "bin/start"
+mount-dir: "/data"
+http:
+  addr: ":20202"
+static:
+  primary-url: "http://${PRIMARY_REGION}.${FLY_APP_NAME}.internal:20202"

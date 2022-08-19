@@ -64,7 +64,7 @@ RUN if [ -f "yarn.lock" ]; then \
 
 FROM base
 
-ARG PROD_PACKAGES="postgresql-client file vim curl gzip libsqlite3-0"
+ARG PROD_PACKAGES="postgresql-client file vim curl gzip libsqlite3-0 fuse3 libfuse-dev sqlite3 wget tar"
 ENV PROD_PACKAGES=${PROD_PACKAGES}
 
 RUN --mount=type=cache,id=prod-apt-cache,sharing=locked,target=/var/cache/apt \
@@ -84,6 +84,10 @@ COPY . .
 RUN bundle exec rails assets:precompile
 
 ENV PORT 8080
+
+COPY --from=flyio/litefs:sha-a9bd2b9 /usr/local/bin/litefs /usr/local/bin/litefs
+
+RUN mkdir -p /data
 
 ARG SERVER_COMMAND="bundle exec puma -C config/puma.rb"
 ENV SERVER_COMMAND ${SERVER_COMMAND}
