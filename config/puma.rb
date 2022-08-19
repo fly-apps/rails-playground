@@ -42,7 +42,7 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 # Allow puma to be restarted by `bin/rails restart` command.
 plugin :tmp_restart
 
-IDLE_TIMEOUT = 5 # seconds
+IDLE_TIMEOUT = 60 # seconds
 
 out_of_band { idle_timer }
 
