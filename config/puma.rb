@@ -44,7 +44,7 @@ plugin :tmp_restart
 
 IDLE_TIMEOUT = 60 # seconds
 
-out_of_band { idle_timer }
+out_of_band { idle_timer unless ENV['PRIMARY_REGION'] == ENV['FLY_REGION'] }
 
 def idle_timer
   @thread.kill if @thread
