@@ -89,7 +89,7 @@ GEM
       reline (>= 0.3.1)
     digest (3.1.0)
     erubi (1.11.0)
-    fly-ruby (0.4.0)
+    fly-ruby (0.4.1)
       rack (~> 2.0)
     foreman (0.87.2)
     globalid (1.0.0)
@@ -224,7 +224,7 @@ DEPENDENCIES
   capybara
   childprocess (~> 4.1)
   debug
-  fly-ruby (~> 0.4.0)
+  fly-ruby (~> 0.4.1)
   foreman (~> 0.87.2)
   importmap-rails
   jbuilder
