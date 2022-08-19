@@ -15,7 +15,7 @@ primary_region = "ord"
   force_https = true
 
 [env]
-  SERVER_COMMAND = "bundle exec puma -C config/puma.rb"
+  DATABASE_URL = "sqlite:///data/db"
 
 [[statics]]
   guest_path = "/app/public"
