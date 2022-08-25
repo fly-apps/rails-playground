@@ -1,7 +1,7 @@
 # fly.toml file generated for fly-rails-playground on 2022-08-11T11:52:31+02:00
 
 app = "fly-rails-playground"
-primary_region = "ord"
+primary_region = "mad"
 
 [build]
   [build.args]
@@ -15,7 +15,7 @@ primary_region = "ord"
   force_https = true
 
 [env]
-  DATABASE_URL = "sqlite:///data/db"
+#  DATABASE_URL = "sqlite:///data/db"
 
 [[statics]]
   guest_path = "/app/public"
