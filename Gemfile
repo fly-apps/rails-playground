@@ -81,3 +81,5 @@ gem "fly-ruby", "0.5.1"
 
 gem "pg", "~> 1.4"
 
+
+gem "surro-gate", "~> 1.0"
