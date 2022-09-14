@@ -81,3 +81,9 @@ gem "fly-ruby", "0.5.1"
 
 gem "pg", "~> 1.4"
 
+
+gem "sitepress", "~> 3.1"
+
+gem "sitepress-rails", "~> 3.1"
+
+gem "markdown-rails", "~> 1.0"
